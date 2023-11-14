@@ -1,0 +1,83 @@
+.item-card {
+  border: 1px solid rgba(255, 255, 255, 0);
+  padding: 24px;
+
+  border-radius: 12px;
+  cursor: pointer;
+  transition: border 0.3s ease;
+  box-shadow: 0px 3px 5px 0px rgba(6, 31, 106, 0.05);
+  background: rgb(255, 255, 255);
+  color: #000000;
+  font-family: "Excon";
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    &__name {
+      flex: 1;
+
+      width: 284px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  &__brand {
+    flex: 1;
+
+    overflow: hidden;
+    color: #191919;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-family: "Excon";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  &__parameters {
+    display: flex;
+    gap: 16px;
+
+    &__divider {
+      width: 1px;
+      background-color: #ccc;
+    }
+  }
+
+  &__parameter {
+    min-width: 90px;
+
+    &__title {
+      font-family: "Excon";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 24px;
+    }
+
+    &__subtitle {
+      font-family: "Excon";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+    }
+
+    @media (min-width: 430px) {
+      min-width: 105px;
+    }
+  }
+}
+
+.item-card.active {
+  border-color: #373737;
+}
